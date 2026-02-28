@@ -1,0 +1,88 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.app {
+  width: min(92vw, 520px);
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+}
+
+.help {
+  margin: 0 0 0.75rem;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.hud p {
+  margin: 0;
+}
+
+.board-wrap {
+  border: 1px solid currentColor;
+  padding: 0.25rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(20, minmax(0, 1fr));
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  gap: 1px;
+}
+
+.cell {
+  border-radius: 2px;
+  background: color-mix(in srgb, currentColor 10%, transparent);
+}
+
+.cell.snake {
+  background: #2fa86e;
+}
+
+.cell.food {
+  background: #d54a4a;
+}
+
+.controls {
+  margin-top: 0.75rem;
+  display: none;
+}
+
+.controls .row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+button {
+  font: inherit;
+  padding: 0.4rem 0.7rem;
+}
+
+.actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    display: block;
+  }
+}
